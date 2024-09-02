@@ -7,8 +7,8 @@ const port = process.env.PORT || '8000';
 app.get('/', rootHandler);
 app.get('/hello/:name', helloHandler);
 
-app.listen(() => {
-    return console.log(`Server is listening on ${port}`);
+app.listen(port, () => {
+    console.log(`Server is listening on ${port}`);
 });
 
 app.on('error', (err) => {
